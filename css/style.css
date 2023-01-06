@@ -1,0 +1,9 @@
+/* universal selector : selects all the element  */
+* {
+  /* reseting default margin and padding  */
+  margin: 0;
+  padding: 0;
+  /* making sure padding and border does not affect width and height of an element  */
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
