@@ -7,3 +7,76 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+/* variables  */
+:root {
+  --red: #e50914;
+}
+
+/* home section  */
+
+#home header {
+  width: 95%;
+  margin: auto;
+  margin-top: 10px;
+  max-width: 1285px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#home .logo {
+  max-width: 80px;
+}
+
+.sign-in-btn {
+  background-color: var(--red);
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.7em;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+/* medium screen  */
+@media (min-width: 426px) {
+  #home .logo {
+    max-width: 114px;
+  }
+
+  #home header {
+    margin-top: 20px;
+  }
+
+  .sign-in-btn {
+    font-size: 1rem;
+  }
+}
+
+/* large screen  */
+@media (min-width: 726px) {
+  #home .logo {
+    max-width: 125px;
+  }
+  #home header {
+    margin-top: 26px;
+  }
+  .sign-in-btn {
+    font-size: 1.125rem;
+  }
+}
+
+/* very large screen */
+@media (min-width: 1425px) {
+  #home .logo {
+    max-width: 136px;
+  }
+  .sign-in-btn {
+    font-size: 1.2rem;
+  }
+}
