@@ -10,6 +10,7 @@
 
 body {
   background-color: rgb(0, 0, 0);
+  color: white;
 }
 
 /* variables  */
@@ -18,15 +19,25 @@ body {
 }
 
 /* home section  */
+#home {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("/images/bg.jpg") no-repeat center center/cover;
+  padding-top: 10px;
+  padding-bottom: 100px;
+}
 
 #home header {
   width: 95%;
   margin: auto;
-  margin-top: 10px;
   max-width: 1285px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 7px;
 }
 
 #home .logo {
@@ -43,40 +54,414 @@ body {
   cursor: pointer;
 }
 
+.container-home {
+  max-width: 650px;
+  width: 95%;
+  margin: auto;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 1.6rem;
+  max-width: 343px;
+  margin: auto;
+}
+
+.home-title-secondary {
+  font-size: 1.1rem;
+  font-weight: normal;
+  letter-spacing: 1.2px;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+.email-form > div {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email-form input {
+  width: 100%;
+  padding: 1em;
+  font-size: 1rem;
+}
+
+.email-form input::placeholder {
+  padding-left: 0.4em;
+}
+
+.email-form button {
+  border: none;
+  color: white;
+  background-color: var(--red);
+  font-size: 1.1rem;
+  padding: 0.4em 0.6em;
+  margin-top: 0.7em;
+  border-radius: 0.12em;
+  cursor: pointer;
+}
+
+.email-form p {
+  font-size: 1rem;
+}
+
+/* # service section  */
+
+#services .container {
+  width: 95%;
+}
+
+.service-items {
+  width: 95%;
+  margin: 26px auto;
+  max-width: 1130px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.service-item-content {
+  width: 100%;
+}
+
+.service-item-content img {
+  max-width: 500px;
+  width: 100%;
+}
+
+.tv-container {
+  position: relative;
+}
+
+.tv-image {
+  margin: auto;
+}
+
+.tv-vedio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50.3%, -54.3%);
+  width: 71.5%;
+  max-width: 360px;
+  z-index: -1;
+}
+
+/* qna section  */
+#qna {
+  padding: 1.2rem 0;
+}
+
+#qna .container {
+  width: 95%;
+  margin: auto;
+  max-width: 725px;
+  text-align: center;
+}
+
+#qna .container .title {
+  text-align: center;
+  margin-bottom: 0.8em;
+}
+
+.qna-item {
+  margin-top: 0.4em;
+}
+
+.question {
+  background-color: #303030;
+  padding: 0.7em 1em;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.answer {
+  background-color: #303030;
+  margin-top: 2px;
+  padding: 0.7em 1em;
+  transition-property: display;
+  transition-duration: 5s;
+  text-align: left;
+}
+
+.hide-answer {
+  display: none;
+}
+
+#qna .email-form {
+  max-width: 650px;
+  margin: auto;
+  margin-top: 1.7em;
+}
+
+/* footer section  */
+footer {
+  padding: 1.2rem 0;
+}
+
+footer .grid-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 12px;
+}
+
+footer .grid-item a,
+footer span {
+  text-decoration: none;
+  color: #737373;
+}
+
+footer .grid-item a:hover {
+  text-decoration: underline;
+}
+
+.grid-item {
+  font-size: 0.9rem;
+}
+
+.grid-item-full {
+  /* spans full column even if it is dynamic  */
+  grid-column: 1 / -1;
+  margin: 20px 0;
+  font-size: 1rem;
+}
+
+/* utilities  */
+.section-line {
+  height: 8px;
+  border: none;
+  background-color: #222;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.para {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.order-first {
+  order: 0;
+}
+
+.order-second {
+  order: 0;
+}
+
+/* was working on the features section  */
+
 /* medium screen  */
 @media (min-width: 426px) {
-  #home .logo {
-    max-width: 114px;
+  #home {
+    padding-top: 20px;
+    padding-bottom: 120px;
   }
 
-  #home header {
-    margin-top: 20px;
+  #home .logo {
+    max-width: 114px;
   }
 
   .sign-in-btn {
     font-size: 1rem;
   }
+
+  .home-title {
+    font-size: 2.5rem;
+    max-width: 537px;
+  }
+
+  .home-title-secondary {
+    font-size: 1.3rem;
+  }
+
+  .container-home {
+    margin-top: 100px;
+    width: 80%;
+  }
+
+  .email-form > div {
+    margin-top: 1rem;
+  }
+
+  .email-form input {
+    padding: 1.2em 0.4;
+    font-size: 1rem;
+  }
+
+  .email-form button {
+    font-size: 1.2em;
+  }
+
+  .email-form p {
+    font-size: 1.1rem;
+  }
+
+  /* servicie section  */
+  .service-items {
+    margin: 36px auto;
+  }
+
+  /* qna section  */
+  #qna {
+    padding: 2rem 0;
+  }
+
+  /* utility section  */
+  .title {
+    font-size: 2.4rem;
+  }
+  .para {
+    font-size: 1.2rem;
+  }
 }
 
 /* large screen  */
 @media (min-width: 726px) {
+  #home {
+    padding-bottom: 190px;
+  }
+
   #home .logo {
     max-width: 125px;
   }
+
   #home header {
-    margin-top: 26px;
+    margin-top: 15px;
   }
+
   .sign-in-btn {
     font-size: 1.125rem;
+  }
+
+  .home-title {
+    font-size: 2.9rem;
+  }
+
+  .home-title-secondary {
+    font-size: 1.5rem;
+  }
+
+  .email-form div {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .email-form button {
+    width: 200px;
+    margin: 0;
+  }
+
+  .email-form input::placeholder {
+    font-size: 1rem;
+  }
+
+  /* services section / */
+
+  .service-items {
+    flex-direction: row;
+    align-items: center;
+    margin: 44px auto;
+    width: 80%;
+    text-align: left;
+  }
+
+  .service-item-content {
+    width: 50%;
+  }
+
+  .service-item-content img {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* qna section  */
+  #qna {
+    padding: 4.5rem 0;
+  }
+
+  .question {
+    padding: 1em 1.2em;
+  }
+
+  .answer {
+    padding: 1.2em 1.2em;
+  }
+
+  #qna .email-form {
+    margin-top: 2.5em;
+  }
+
+  /* footer  */
+  footer {
+    padding: 2.5rem 0;
+  }
+
+  footer .grid-container {
+    width: 80%;
+  }
+
+  /* footer  */
+  footer .grid-container {
+    grid-template-columns: auto auto auto;
+  }
+
+  /* utility section  */
+  .title {
+    font-size: 2.5rem;
+    /* text-align: left; */
+  }
+
+  .para {
+    font-size: 1.2rem;
+    /* text-align: left; */
+  }
+
+  .order-first {
+    order: 1;
+  }
+
+  .order-second {
+    order: 2;
+  }
+
+  .order-first img {
+    margin-right: 100%;
   }
 }
 
 /* very large screen */
-@media (min-width: 1425px) {
+@media (min-width: 1225px) {
   #home .logo {
     max-width: 136px;
   }
+
   .sign-in-btn {
     font-size: 1.2rem;
+  }
+
+  /* footer  */
+  /* footer  */
+  footer .grid-container {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  /* utility section  */
+  .title {
+    font-size: 2.7rem;
+    text-align: left;
+  }
+
+  .para {
+    font-size: 1.4rem;
+    text-align: left;
+    letter-spacing: 0.05em;
   }
 }
